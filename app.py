@@ -216,6 +216,109 @@ def inject_css() -> None:
         .stSelectbox > div > div {
             border-radius: 10px !important;
         }
+
+        /* ===== RESPONSIVE - Giao diện điện thoại ===== */
+        @media (max-width: 768px) {
+            /* Giảm padding tổng thể */
+            .main .block-container {
+                padding: 0 12px 1.5rem 12px !important;
+                max-width: 100%;
+            }
+
+            /* Header gọn hơn, stack dọc trên mobile */
+            .feedback-header {
+                padding: 16px 18px;
+                border-radius: 14px 14px 0 0;
+            }
+
+            .feedback-header-title {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+                font-size: 20px;
+            }
+
+            .feedback-header-title-text .line1 {
+                font-size: 22px;
+                line-height: 1.2;
+            }
+
+            .feedback-header-title-text .line2 {
+                font-size: 16px;
+            }
+
+            .feedback-header-subtitle {
+                font-size: 12px;
+                margin-top: 6px;
+            }
+
+            .feedback-logo {
+                height: 48px;
+            }
+
+            .feedback-icon {
+                font-size: 36px;
+            }
+
+            /* Card form gọn hơn */
+            .feedback-card {
+                padding: 16px 18px 20px 18px;
+                border-radius: 0 0 14px 14px;
+                margin-bottom: 16px;
+            }
+
+            /* Info box gọn, dễ đọc */
+            .info-box {
+                padding: 12px 14px 14px 14px;
+                border-radius: 10px;
+                margin-bottom: 16px;
+                font-size: 13px;
+            }
+
+            .info-title {
+                font-size: 14px;
+            }
+
+            .info-list {
+                padding-left: 18px;
+                font-size: 12px;
+            }
+
+            /* Form inputs - tăng kích thước chạm cho mobile */
+            .stTextInput > div > div > input,
+            .stTextArea > div > textarea {
+                font-size: 16px !important; /* Tránh zoom tự động trên iOS */
+            }
+
+            /* Nút bấm full-width, dễ chạm */
+            .stButton button {
+                width: 100%;
+                padding: 12px 24px;
+                font-size: 15px;
+                min-height: 48px;
+            }
+
+            /* Cột form xếp dọc trên mobile */
+            [data-testid="column"] {
+                flex: 1 1 100% !important;
+                max-width: 100% !important;
+            }
+        }
+
+        /* Điện thoại rất nhỏ */
+        @media (max-width: 480px) {
+            .feedback-header-title-text .line1 {
+                font-size: 19px;
+            }
+
+            .feedback-header-title-text .line2 {
+                font-size: 14px;
+            }
+
+            .main .block-container {
+                padding: 0 10px 1rem 10px !important;
+            }
+        }
         </style>
         """,
         unsafe_allow_html=True,
