@@ -1,6 +1,6 @@
-## Hòm thư góp ý CNT 2025-2026
+## Hòm thư góp ý
 
-Ứng dụng web được xây dựng bằng **Python + Streamlit** mô phỏng giao diện hòm thư góp ý như trong hình mẫu.
+Ứng dụng web được xây dựng bằng **Python + Streamlit**.
 
 ### 1. Cài đặt môi trường
 
